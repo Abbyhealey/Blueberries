@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Nanum Myeongjo', serif;
+    background-color: #f3f2f8;
+
+    /* Remove the old background image from here — 
+       it's now in the ::before layer for opacity control */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ===== BACKGROUND IMAGE WITH OPACITY ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/mainimage.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* <<< ADJUST OPACITY HERE >>> */
+    opacity: 0.80;
+
+    /* Keep it behind everything */
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.html{
+    width:100%;
+}
+
+.boxfont {
+  width: 60%;
+  height: 300px;
+  background-color: #FFF7EF;
+  margin-top: 0;
+  z-index: 2;
+  Position: Absolute;
+  top: 40%;
+  left: 20%;
+  border-radius: 20px;
+
+
+}
+
+.background {
+     width: 100%;
+  background-color: #F2F1FF;
+  margin-top: 0;
+  z-index: 1;
+  Position: Absolute;
+}
+
+/* Header */
+header {
+  background-color: #FFF7EF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  text-decoration: underline;
+  color: #3b3170;
+  text-align: left;
+  padding: 5px 40px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navigation */
+nav {
+  background-color: #FFF7EF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3b3170;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Hero Section */
+  .season-box {
+  display: flex;
+  background: #faf6ee;
+  padding: 40px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 40px auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: "Georgia", serif;
+}
+
+.season-left,
+.season-right {
+  flex: 0 0 auto;
+}
+
+.sun-img {
+  width: 130px;
+  height: auto;
+}
+
+.berries-img {
+  width: 200px;
+  height: auto;
+}
+
+.season-content {
+  flex: 1;
+  padding: 0 40px;
+}
+
+.season-content h2 {
+  font-size: 32px;
+  color: #2c2c74;
+  margin-bottom: 15px;
+}
+
+.season-word {
+  font-weight: normal;
+  color: #2c2c74;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #2c2c74;
+}
+
+.season-content p {
+  color: #4a4a4a;
+  line-height: 1.5;
+  font-size: 15px;
+} 
+
+  .jam-box {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #f8f4ef;
+  border-radius: 12px;
+  padding: 40px;
+  border: 3px solid #e6dfd5;
+  font-family: "Georgia", serif;
+  color: #2d2a26;
+}
+
+.jam-box h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #22306e;
+  margin-bottom: 35px;
+}
+
+.jam-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.images-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #22306e;
+}
+
+.img {
+  width: 180px;
+  height: auto;
+}
+
+.plus, .equals {
+  font-size: 48px;
+  color: #1c2546;
+}
+
+.text-section {
+  width: 40%;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 850px) {
+  .jam-content {
+    flex-direction: column;
+  }
+
+  .text-section {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+.page {
+    width: 95%;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+/* MAIN BOXES */
+.box {
+    background: #fbf7f2;
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px #00000015;
+}
+
+/* RIGHT TOP BOX */
+.top-right {
+    float: right;
+    width: 55%;
+    min-height: 260px;
+}
+
+.top-right-inner {
+    display: flex;
+    align-items: center;
+}
+
+.bowl-img {
+    width: 260px;
+    margin-right: 25px;
+}
+
+.healthy-text h2 {
+    color: #23306a;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.healthy-text .subheader {
+    margin: 5px 0 15px;
+    font-size: 15px;
+    color: #23306a;
+}
+
+.healthy-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #23306a;
+    line-height: 1.6;
+}
+
+/* LEFT NUTRITION BOX */
+.left-box {
+    float: left;
+    width: 30%;
+    max-height: 600px;
+}
+
+.cluster-img {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    color: #23306a;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.serving {
+    text-align: center;
+    margin-top: -5px;
+    font-size: 12px;
+    color: #2e3450;
+}
+
+/* Nutrition facts block */
+.nutri-block {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #2e3450;
+}
+
+.thick-line {
+    width: 100%;
+    height: 7px;
+    background: #23306a;
+    margin: 10px 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #bbb;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+.right {
+    float: right;
+}
+
+/* BOTTOM BERRIES */
+.box-bottom-box {
+    text-align: center;
+}
+
+.big-berry1 {
+    width: 360px;
+}
+
